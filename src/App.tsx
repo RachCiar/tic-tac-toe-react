@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from '../src/styles/styles.module.scss'
+import GameBoard from './components/GameBoard'
+import PlayerOne from './components/PlayerOne'
+import PlayerTwo from './components/PlayerTwo'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {/* Header Content */}
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <div>
+            <h1>Tic-Tac-Toe</h1>
+            <button type="button" className={styles.button} id={styles["playAgain"]}>Play Again</button>
+          </div>
+        </div>
+
+        {/* Game Content */}
+        <PlayerOne/>
+        <GameBoard />
+        <PlayerTwo />
+
+
+
+        {/* Footer Content */}
+        <footer className={styles.footer}>
+          <p>Tic Tac Toe game written by Rachel Ciarlante</p>
+        </footer>
+
+      </div>
+    </>
+  )
 }
 
 export default App;
