@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../styles/styles.module.scss'
-import xImage from '../images/pic-of-x.png'
-
+import DraggableGamePiece from './DraggableGamePiece'
 
 
 
@@ -19,12 +18,12 @@ export const PlayerOne = () => {
       </form>
       <div className={styles.pieces1}>
         <p id={styles["message1"]}>Click and drag your game piece to the board.</p>
-        <div className={styles.pic} id={styles["p1Piece1"]}><img className={styles.x} src={xImage} alt="pic of x"/></div>
-        <div className={styles.pic} id={styles["p1Piece2"]}><img className={styles.x} src={xImage}  alt="pic of x"/></div>
-        <div className={styles.pic} id={styles["p1Piece3"]}><img className={styles.x} src={xImage}  alt="pic of x"/></div>
-        <div className={styles.pic} id={styles["p1Piece4"]}><img className={styles.x} src={xImage}  alt="pic of x"/></div>
-        <div className={styles.pic} id={styles["p1Piece5"]}><img className={styles.x} src={xImage}  alt="pic of x"/></div>
-        <div className={styles.pic} id={styles["p1Piece6"]}><img className={styles.x} src={xImage}  alt="pic of x"/></div>
+        <DraggableGamePiece id={styles['p1Piece1']} piece="x" />
+        <DraggableGamePiece id={styles['p1Piece2']} piece="x" />
+        <DraggableGamePiece id={styles['p1Piece3']} piece="x" />
+        <DraggableGamePiece id={styles['p1Piece4']} piece="x" />
+        <DraggableGamePiece id={styles['p1Piece5']} piece="x" />
+        <DraggableGamePiece id={styles['p1Piece6']} piece="x" />
       </div>
     </div>
   )
